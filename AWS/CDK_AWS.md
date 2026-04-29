@@ -7,7 +7,7 @@ Dessa forma você pode configurar todo seu ambiente sem a necessidade de ir na i
 > _R: Ele gera em seu background templates AWS CloudFormation que executa a criação dos recursos._
 
 A linguagem mais comum usada é typescript.   
-Um exemplo de uso:   
+Exemplo 1 de uso:   
 ```typescript
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
@@ -28,7 +28,25 @@ export class MyFirstStack extends cdk.Stack {
 ___
 
 > ```cdk init app --language typescript```  
-> ```• Coloca esse código no stack```  
+> ```• coloca esse código no stack```  
 > ```cdk deploy```  
+
+Exemplo 2 de uso:
+```typescript
+import * as ec2 from 'aws-cdk-lib/aws-ec2';
+
+const vpc = new ec2.Vpc(this, 'MyVPC');
+
+new ec2.Instance(this, 'MyInstance', {
+  vpc,
+  instanceType: new ec2.InstanceType('t2.micro'),
+  machineImage: ec2.MachineImage.latestAmazonLinux(),
+});
+```
+___
+
+> ```• cria uma VPC (rede)```  
+> ```• cria uma instância EC2 (sua VM)```  
+> ```• configura imagem e tipo - automático no cmd: cdk deploy```   
 
 O CDK vai gerar um template do AWS CloudFormation e provisionar o recurso.
