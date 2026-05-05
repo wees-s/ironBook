@@ -1,4 +1,4 @@
-**VM vs AWS Lambda**
+**AWS Lambda**
 
 ---
 
@@ -6,34 +6,8 @@ Comparação entre execução tradicional baseada em servidor e modelo serverles
 
 ---
 
-> *Qual a diferença central?*
-> *R: VM você gerencia o servidor. Lambda você só envia a função.*
-
----
-
-## VM (Virtual Machine)
-
-Ambiente completo com **sistema operacional próprio**.
-
-* Controle total da máquina
-* Processo contínuo
-* Provisionamento manual
-* Escala manual
-
-Exemplo de fluxo:
-
-```text id="p3k9zr"
-1. Criar VM
-2. Instalar dependências
-3. Subir aplicação
-4. Manter servidor rodando
-```
-
----
-
-> `• controle total`
-> `• ambiente persistente`
-> `• maior responsabilidade operacional`
+> *Qual a diferença central entre AWS Lambda e uma VM?*
+> *R: Resumo: VM você gerencia o servidor. Lambda você só envia a função.*
 
 ---
 
@@ -60,6 +34,32 @@ Exemplo de fluxo:
 > `• sem servidor`
 > `• execução efêmera`
 > `• escala automática`
+
+---
+
+## VM (Virtual Machine)
+
+Ambiente completo com **sistema operacional próprio**.
+
+* Controle total da máquina
+* Processo contínuo
+* Provisionamento manual
+* Escala manual
+
+Exemplo de fluxo:
+
+```text id="p3k9zr"
+1. Criar VM
+2. Instalar dependências
+3. Subir aplicação
+4. Manter servidor rodando
+```
+
+---
+
+> `• controle total`
+> `• ambiente persistente`
+> `• maior responsabilidade operacional`
 
 ---
 
